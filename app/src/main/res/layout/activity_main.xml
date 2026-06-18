@@ -5,9 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pink"> <!-- YOUR BACKGROUND GOES HERE -->
+    android:background="@drawable/pink">
 
-  <!-- 1. STATS AT THE TOP -->
+
   <LinearLayout
       android:id="@+id/statsLayout"
       android:layout_width="wrap_content"
@@ -30,7 +30,21 @@
         android:text="Cleanliness: 50" android:textSize="28sp" android:textStyle="bold" android:textColor="#000000"/>
   </LinearLayout>
 
-  <!-- 2. NOYL IN THE MIDDLE -->
+
+  <TextView
+      android:id="@+id/statusPromptText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Lyon Is OK"
+      android:textSize="30sp"
+      android:textStyle="bold"
+      android:textColor="#555555"
+      android:layout_marginTop="15dp"
+      app:layout_constraintTop_toBottomOf="@id/petImageView"
+      app:layout_constraintBottom_toTopOf="@id/buttonsLayout"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
   <ImageView
       android:id="@+id/petImageView"
       android:layout_width="300dp"
@@ -51,7 +65,17 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent" />
 
-  <!-- 4. ACTION BUTTONS AT THE BOTTOM -->
+  <ImageView
+      android:id="@+id/dirtOverlay"
+      android:layout_width="300dp"
+      android:layout_height="300dp"
+      android:src="@drawable/dirt"
+      android:alpha="0.0"
+      app:layout_constraintTop_toTopOf="@id/petImageView"
+      app:layout_constraintBottom_toBottomOf="@id/petImageView"
+      app:layout_constraintStart_toStartOf="@id/petImageView"
+      app:layout_constraintEnd_toEndOf="@id/petImageView" />
+
   <LinearLayout
       android:id="@+id/buttonsLayout"
       android:layout_width="match_parent"
